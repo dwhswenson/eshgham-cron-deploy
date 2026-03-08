@@ -10,6 +10,7 @@ module "eshgham_cron" {
   source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron"
   aws_region = "us-east-2"
   schedule_expression = "cron(0 12 * * ? *)"
+  #schedule_expression = "cron(0 * * * ? *)"
   eshgham_config_file = "./config.yaml"
   github_token = var.gh_token
   email_sender = "dwhs@hyperblazer.net"
