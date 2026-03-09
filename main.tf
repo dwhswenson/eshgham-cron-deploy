@@ -1,3 +1,8 @@
+terraform {
+  backend "s3" {
+    key = "eshgham-cron/terraform.tfstate"
+  }
+}
 
 variable "gh_token" {
   description = "GitHub PAT"
@@ -10,7 +15,7 @@ module "eshgham_cron" {
   source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron"
   aws_region = "us-east-2"
   schedule_expression = "cron(0 12 * * ? *)"
-  #schedule_expression = "cron(0 * * * ? *)"
+  #schedule_expression = "cron(0 * * * ? *)"  # hourly for testing
   eshgham_config_file = "./config.yaml"
   github_token = var.gh_token
   email_sender = "dwhs@hyperblazer.net"
