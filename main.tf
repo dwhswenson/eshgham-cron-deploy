@@ -11,8 +11,8 @@ variable "gh_token" {
 }
 
 module "eshgham_cron" {
-  #source = "git::https://github.com/omsf-eco-infra/eshgham-cron.git?ref=main"
-  source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron"
+  source = "git::https://github.com/omsf-eco-infra/eshgham-cron.git?ref=refactor-result-types"
+  #source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron"
   aws_region = "us-east-2"
   schedule_expression = "cron(0 12 * * ? *)"
   #schedule_expression = "cron(0 * * * ? *)"  # hourly for testing
