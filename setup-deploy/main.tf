@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "deploy_bootstrap" {
-  source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron/deploy-bootstrap"
+  source = "/Users/dwhs/Dropbox/omsf/eco-infra/src/eshgham-cron/bootstrap-deploy-repo"
 
   github_repository = var.github_repository
   gh_token          = var.gh_token
